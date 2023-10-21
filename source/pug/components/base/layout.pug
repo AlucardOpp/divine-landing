@@ -1,0 +1,41 @@
+doctype html
+
+include ../components
+
+block variables
+
+html(lang="ru")
+  head
+    title= title
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="description", content="Divine landing hotels — Освещение для отелей, гостиниц, и домов отдыха")
+    //- генерируйте favicon тут - https://realfavicongenerator.net/
+    //- в подключение фавикон манифеста обязательно добавьте строчки crossorigin="use-credentials"
+    //- link(rel='icon' type='image/png' sizes='32x32' href='/favicon.svg')
+    //- link(rel='icon' type='image/png' sizes='16x16' href='/favicon-small.svg')
+    link(rel='manifest' href='/site.webmanifest' crossorigin='use-credentials')
+
+    //- используйте только для шрифта находящегося на первом экране
+    link(rel="preload" href="fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin)
+    link(rel="preload" href="fonts/montserrat-extrabold.woff2" as="font" type="font/woff2" crossorigin)
+    link(rel="preload" href="fonts/montserrat-semibold.woff2" as="font" type="font/woff2" crossorigin)
+    link(rel="preload" href="fonts/montserrat-medium.woff2" as="font" type="font/woff2" crossorigin)
+    link(rel="stylesheet", href="css/style.min.css")
+
+  body
+    +sprite()
+    .wrapper(class=wrapperMods)
+      if (hasHeader)
+        +header(headerMods, currentUrl)
+
+      block main
+
+      if (hasFooter)
+        +footer(footerMods)
+
+    block modals
+
+    script(src="js/vendor.min.js")
+    script(src="js/main.min.js")

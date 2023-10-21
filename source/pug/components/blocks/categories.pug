@@ -1,0 +1,30 @@
+mixin categories()
+  .categories(data-list="block")
+    .categories__slider.swiper(data-list="wrapper")
+      ul.categories__list.swiper-wrapper(data-list="list")
+        li.categories__item.categories__item--active.swiper-slide #[+btn({text: "Дизайн интерьера", href: "#"}).btn--grey]
+        li.categories__item.swiper-slide #[+btn({text: "Обои", href: "#"}).btn--grey]
+        li.categories__item.swiper-slide #[+btn({text: "Ландшафт", href: "#"}).btn--grey]
+        li.categories__item.swiper-slide #[+btn({text: "Инструменты", href: "#"}).btn--grey]
+        li.categories__item.swiper-slide #[+btn({text: "Краски", href: "#"}).btn--grey]
+        li.categories__item.swiper-slide #[+btn({text: "Наливной пол", href: "#"}).btn--grey]
+        li.categories__item.swiper-slide #[+btn({text: "Системы винтеляции", href: "#"}).btn--grey]
+        li.categories__item.swiper-slide #[+btn({text: "Краски", href: "#"}).btn--grey]
+        li.categories__item.swiper-slide #[+btn({text: "Наливной пол", href: "#"}).btn--grey]
+        li.categories__item.swiper-slide #[+btn({text: "Системы винтеляции", href: "#"}).btn--grey]
+
+    button(type="button").button-arrow.categories__button.categories__button--prev
+      span.button-arrow__icon
+        +icon("icon-arrow", "14", "15" )
+
+    button(type="button").button-arrow.categories__button.categories__button--next
+      span.button-arrow__icon
+        +icon("icon-arrow", "14", "15" )
+
+    button(type="button", data-list="button").categories__button-show.button-controls
+      span.button-controls__text.button-controls__text--open
+        | Развернуть категории
+      span.button-controls__text.button-controls__text--close
+        | Свернуть категории
+      span.button-controls__icon
+        +icon("icon-arrow-2", "8", "9" )

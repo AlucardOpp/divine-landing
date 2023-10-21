@@ -1,0 +1,148 @@
+.work-gallery {
+  margin-bottom: 115px;
+
+  @include vp-767 {
+    margin-bottom: 72px;
+  }
+
+  &__gallery {
+    height: 362px;
+
+    @include vp-767 {
+      height: 413px;
+      overflow: visible;
+    }
+  }
+
+
+  &__slider-controls.slider-controls {
+    display: none;
+
+    & .slider-controls__pagination {
+      color: $color-default-black;
+    }
+
+    @include vp-767 {
+      display: flex;
+    }
+  }
+
+  & .swiper-wrapper {
+    @include vp-767 {
+      margin-bottom: 22px;
+    }
+  }
+
+  .swiper-slide {
+    max-width: calc(100vw - 40px);
+    width: auto;
+    height: auto;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  & .container {
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include vp-767 {
+      align-items: center;
+      overflow: hidden;
+    }
+
+    & .work-gallery__title {
+      align-self: start;
+      font-size: 35px;
+      line-height: 43px;
+      font-weight: 800;
+      margin: 0 0 22px 0;
+
+      @include vp-767 {
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 24px;
+      }
+    }
+
+    & .work-gallery__description {
+      align-self: start;
+      margin-bottom: 68px;
+      max-width: 586px;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 18px;
+
+      @include vp-767 {
+        margin-bottom: 25px;
+      }
+
+      & p {
+        margin: 0;
+
+        &:not(:last-of-type) {
+          margin-bottom: 22px;
+
+          @include vp-767 {
+            margin-bottom: 19px;
+          }
+        }
+      }
+
+      @include vp-767 {
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+
+    & .work-gallery__gallery {
+      display: flex;
+      position: relative;
+
+      @include vp-767 {
+        align-self: flex-start;
+        flex-direction: column;
+      }
+
+      & .gallery__item {
+        padding-right: 15px;
+      }
+
+      & .work-gallery__show-more {
+        width: 226px;
+        height: 361px;
+        background-color: $color-white-smoke;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 27px;
+
+        transition: opacity $trans-default;
+
+        @include hover {
+          opacity: 0.6;
+        }
+      }
+
+      & .controls {
+        display: none;
+        color: $color-default-black;
+
+        @include vp-767 {
+          display: flex;
+
+          bottom: -55px;
+          left: -12px;
+        }
+      }
+
+    }
+  }
+}

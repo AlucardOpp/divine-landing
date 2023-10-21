@@ -1,0 +1,36 @@
+mixin reviewsPartners()
+  .reviews-partners
+    .container
+      +title({level: "2", text: "О нас говорят"}).title--h2.reviews-partners__title
+      .reviews-partners__slider.swiper
+        .reviews-partners__wrapper.swiper-wrapper
+          .reviews-partners__item.swiper-slide
+            .reviews-partners__content
+              +icon('quotation-mark', 29, 26)
+              p Когда начали сотрудничать<br> с&nbsp;партнёрами Дивайн - сразу получили массу положительных преимуществ, от&nbsp;скидок до&nbsp;бесплатных услуг, всем&nbsp;рекомендую!
+            .reviews-partners__user
+              .reviews-partners__img
+                +picture("content", "review-timur", "jpg", 76, 76, "Фото Тимура")
+              .reviews-partners__name
+                p Тимур, студия дизайна Everest
+
+          .reviews-partners__item.swiper-slide
+            .reviews-partners__content
+              +icon('quotation-mark', 29, 26)
+              p Когда начали сотрудничать<br> с&nbsp;партнёрами Дивайн - сразу получили массу положительных преимуществ, от&nbsp;скидок до&nbsp;бесплатных услуг, всем&nbsp;рекомендую!
+            .reviews-partners__user
+              .reviews-partners__img
+                +picture("content", "review-timur", "jpg", 76, 76, "Фото Тимура")
+              .reviews-partners__name
+                p Тимур, студия дизайна Everest
+
+          .reviews-partners__item.swiper-slide
+            .reviews-partners__content
+              +icon('quotation-mark', 29, 26)
+              p Когда начали сотрудничать<br> с&nbsp;партнёрами Дивайн - сразу получили массу положительных преимуществ, от&nbsp;скидок до&nbsp;бесплатных услуг, всем&nbsp;рекомендую!
+            .reviews-partners__user
+              .reviews-partners__img
+                +picture("content", "review-timur", "jpg", 76, 76, "Фото Тимура")
+              .reviews-partners__name
+                p Тимур, студия дизайна Everest
+      +controls(1, 3).reviews-partners__slider-controls

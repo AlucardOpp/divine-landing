@@ -1,0 +1,11 @@
+mixin exhibitions()
+  .exhibitions
+    //- вставлять блоки во внешний контейнер неверно
+    //- все блоки содержат в себе container без доп класса tutorial__wrapper
+    .container
+      h2.exhibitions__title Мы участвуем в выставках
+      .exhibitions-list
+        .exhibitions-list__item
+          +picture("content", "vistavka_red", "webp", 309, 76, "Mos build")
+        .exhibitions-list__item
+          +picture("content", "vistavka_yellow", "webp", 247, 76, "Inter light")

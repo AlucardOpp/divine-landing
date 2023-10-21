@@ -1,0 +1,145 @@
+.category-cards__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  column-gap: 2%;
+  row-gap: 80px;
+
+  @include vp-1023 {
+    grid-template-columns: repeat(2, 46%);
+    column-gap: 4%;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 34px;
+  }
+}
+
+.category-cards__item {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: 460px;
+
+  background-color: $color-white-smoke-4;
+
+  @include vp-767 {
+    min-height: 338px;
+  }
+}
+
+.category-cards__picture-wrap {
+  width: 100%;
+  height: 231px;
+
+  @include vp-767 {
+    height: 203px;
+  }
+
+  & img {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  &--designers-heaven {
+    background-color: $color-sandrift;
+  }
+
+  &--kaleva {
+    background-color: $color-tahuna-sands;
+
+    img {
+      object-position: center left;
+
+      @include vp-767 {
+        object-position: top left;
+      }
+    }
+  }
+
+  &--aeg {
+    background-color: $color-saddle;
+  }
+
+  &--leroy-merlin {
+    background-color: $color-dark-khaki;
+  }
+
+  &--zagatti {
+    position: relative;
+    background-color: $color-resolution-blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 178px;
+      height: 77px;
+    }
+  }
+
+  &--wallstreet {
+    background-color: $color-cement;
+  }
+
+  @include vp-767 {
+    height: 203px;
+  }
+}
+
+.category-cards__content-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 22px 22px 21px 16px;
+}
+
+.category-cards__text-wrap {
+  margin-bottom: 29px;
+
+  @include vp-767 {
+    margin-bottom: 12px;
+  }
+}
+
+.category-cards__title {
+  margin: 0;
+  margin-bottom: 15px;
+
+  font-size: 19px;
+  line-height: 23.16px;
+  font-weight: 700;
+
+  @include vp-767 {
+    margin-bottom: 12px;
+
+    font-size: 17px;
+    line-height: 21px;
+  }
+}
+
+.category-cards__text {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 400;
+}
+
+.category-cards__btn {
+  align-self: flex-end;
+
+  span {
+    @include vp-767 {
+      margin-left: 11px;
+    }
+  }
+}

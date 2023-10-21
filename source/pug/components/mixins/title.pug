@@ -1,0 +1,5 @@
+mixin title(options = {})
+  - const tag = options.level ? "h" + options.level : "h1";
+  - const text = options.text || "";
+
+  #{tag}.title&attributes(attributes)!=text

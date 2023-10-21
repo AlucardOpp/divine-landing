@@ -1,0 +1,182 @@
+.reviews-partners {
+  padding-bottom: 95px;
+  font-size: 18px;
+  line-height: 22px;
+
+  @include vp-1023 {
+    font-size: 18px;
+    line-height: 20px;
+    padding-bottom: 71px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 17px;
+    padding-bottom: 51px;
+  }
+
+  .container {
+    position: relative;
+
+    @include vp-767 {
+      padding-right: 27px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 22px;
+    text-align: center;
+
+    @include vp-767 {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__content {
+    width: 72%;
+    max-width: 685px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include vp-767 {
+      width: 100%;
+    }
+
+    svg {
+      margin-bottom: 42px;
+      width: 29px;
+      height: 26px;
+    }
+
+    p {
+      margin: 0;
+      margin-bottom: 36px;
+      font-weight: 400;
+      text-align: center;
+      padding-left: 24px;
+
+      @include vp-767 {
+        padding-left: 0;
+        margin-bottom: 26px;
+      }
+    }
+
+    br {
+      display: none;
+
+      @include vp-767 {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  &__user {
+    width: 60%;
+    max-width: 680px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+
+  &__img {
+    width: 76px;
+    height: 76px;
+    margin-bottom: 23px;
+    margin-left: 24px;
+
+    @include vp-767 {
+      width: 61px;
+      height: 61px;
+      margin-left: 11px;
+      margin-bottom: 16px;
+    }
+
+    img {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      background-color: #f8f8f8;
+      object-fit: cover;
+
+      @include vp-767 {
+        width: 61px;
+        height: 61px;
+      }
+    }
+  }
+
+  &__name {
+    padding-left: 15px;
+
+    @include vp-1023 {
+      margin-bottom: 35px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 18px;
+    }
+
+    p {
+      margin: 0;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+
+  &__slider-controls {
+    position: absolute;
+    top: 11px;
+    right: 40px;
+    flex-wrap: wrap;
+
+    @include vp-1023 {
+      position: static;
+      justify-content: center;
+      padding-left: 13px;
+    }
+
+    .swiper-pagination {
+      color: $color-default-black;
+      width: 30px;
+      position: static;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: relative;
+  }
+
+  .swiper-button-next {
+    position: relative;
+    right: 0;
+    margin-right: 0;
+  }
+
+  .swiper-button-prev {
+    position: relative;
+    left: 0;
+    margin-left: 0;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    display: none;
+  }
+}

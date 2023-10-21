@@ -1,0 +1,81 @@
+.slider-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &__button {
+    width: 29px;
+    height: 29px;
+    display: flex;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-default-black;
+    transition: opacity $trans-default;
+    border-radius: 50%;
+    margin-top: 0;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+
+    &.swiper-button-next,
+    &.swiper-button-prev {
+      position: relative;
+    }
+
+    &--next {
+      margin-left: 11px;
+
+      @include vp-1023 {
+        margin-left: 10px;
+      }
+
+      &::before {
+        background-image: url('./../img/sprite/icon-btn-arrow-right.svg');
+      }
+    }
+
+    &--prev {
+      margin-right: 7px;
+
+      &::before {
+        background-image: url('./../img/sprite/icon-btn-arrow-left.svg');
+      }
+    }
+
+    @include hover {
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    &::before {
+      content: "";
+      width: 14px;
+      height: 16px;
+      top: 5px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      width: 150%;
+      height: 150%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__pagination {
+    width: 30px;
+    position: static;
+    color: $color-default-white;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}

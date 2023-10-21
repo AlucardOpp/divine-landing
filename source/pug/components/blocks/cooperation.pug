@@ -1,0 +1,18 @@
+mixin cooperation()
+  section.cooperation
+    .container
+      .cooperation__container
+        .cooperation__image
+          +picture("content", "cooperation-image", "jpg", 1199, 368, "Фоновое изображение")
+        .cooperation__text-content
+          h2.cooperation__title!="Сотрудничество с&nbsp;Дивайн Лайт это очень выгодно и&nbsp;удобно"
+          p.cooperation__description!="Присоединяйтесь к&nbsp;нам прямо сейчас"
+        .cooperation__form(data-validate)
+          form(action="#")
+            .cooperation__inputs
+              .cooperation__input
+                +custom-input({inputType: "text", inputName: "user-name", inputId: "user-name", inputPlaceholder: "Ваше имя", inputError: "Заполните поле"})(data-validate-type="text")
+              .cooperation__input
+                +custom-input({inputType: "tel", inputName: "user-phone", inputId: "user-phone", inputPlaceholder: "Ваш телефон", inputError: "Некорректный номер телефона"})(data-validate-type="phone")
+            button.btn.cooperation__button(type="submit")!="Оставить заявку"
+      p.cooperation__information Оставляя свои контактные данные в&nbsp;этой форме, вы&nbsp;даете согласие на&nbsp;#[a(href="#" aria-label="Подробно о обработке данных" target="_blank")!="обработку"] персональных данных

@@ -1,0 +1,73 @@
+mixin categoryCards()
+  ul.category-cards__list
+    li.category-cards__item
+      .category-cards__picture-wrap.category-cards__picture-wrap--designers-heaven
+        +picture("content", "designers-heaven", "jpg", 383, 231, "Студия Designers Heaven")
+      .category-cards__content-wrap
+        .category-cards__text-wrap
+          h3.category-cards__title Студия Designers Heaven
+          p.category-cards__text
+            | Работают в&nbsp;сфере дизайна уже #[br]
+            | более 7&nbsp;лет, за&nbsp;это время успели сделать #[br]
+            | около 3000&nbsp;проектов, от&nbsp;классики до
+            | современного стиля
+        +buttonArrowText({text: "Получить скидку", href: "#"}).btn--arrow-icon.category-cards__btn
+
+    li.category-cards__item
+      .category-cards__picture-wrap.category-cards__picture-wrap--kaleva
+        +picture("content", "kaleva", "jpg", 383, 231, "Окна Kaleva со скидкой 50%")
+      .category-cards__content-wrap
+        .category-cards__text-wrap
+          h3.category-cards__title Окна Kaleva со скидкой 50%
+          p.category-cards__text
+            | Вся москва знает про эти прекрасные окна,
+            | каждый рад наслаждаться отличным видом из
+            | них по&nbsp;утрам.
+        +buttonArrowText({text: "Получить скидку", href: "#"}).btn--arrow-icon.category-cards__btn
+
+    li.category-cards__item
+      .category-cards__picture-wrap.category-cards__picture-wrap--aeg
+        +picture("content", "aeg", "jpg", 383, 231, "Инструменты AEG")
+      .category-cards__content-wrap
+        .category-cards__text-wrap
+          h3.category-cards__title Инструменты AEG
+          p.category-cards__text
+            | От&nbsp;шуруповертов до&nbsp;пил коммерческого
+            | масштаба, работает 24/7 без перебоев. #[br]
+            | А&nbsp;для наших клиентов со&nbsp;скидкой&nbsp;10%!
+        +buttonArrowText({text: "Получить скидку", href: "#"}).btn--arrow-icon.category-cards__btn
+
+    li.category-cards__item
+      .category-cards__picture-wrap.category-cards__picture-wrap--leroy-merlin
+        +picture("content", "leroy-merlin", "jpg", 383, 231, "Леруа мерлен")
+      .category-cards__content-wrap
+        .category-cards__text-wrap
+          h3.category-cards__title Леруа мерлен
+          p.category-cards__text
+            | Любые товары на&nbsp;любой вкус, от&nbsp;самых #[br]
+            | дорогих до&nbsp;самых дешевых, тут может #[br]
+            | быть еще какой то&nbsp;текст
+        +buttonArrowText({text: "Получить скидку", href: "#"}).btn--arrow-icon.category-cards__btn
+
+    li.category-cards__item
+      .category-cards__picture-wrap.category-cards__picture-wrap--zagatti
+        +svg("svg", "zagatti-logo", 178, 77, "Логотип компании")
+      .category-cards__content-wrap
+        .category-cards__text-wrap
+          h3.category-cards__title Натяжные потолки Zagatti
+          p.category-cards__text
+            | Куда более важной частью является потолок,
+            | белый чистый и&nbsp;без порезов! Именно такие
+            | мы&nbsp;и&nbsp;натягиваем
+        +buttonArrowText({text: "Получить скидку", href: "#"}).btn--arrow-icon.category-cards__btn
+
+    li.category-cards__item
+      .category-cards__picture-wrap.category-cards__picture-wrap--wallstreet
+        +picture("content", "wallstreet", "jpg", 383, 231, "Обои WallStreet")
+      .category-cards__content-wrap
+        .category-cards__text-wrap
+          h3.category-cards__title Обои WallStreet
+          p.category-cards__text
+            | Лучшие обои во&nbsp;всем мире, украсят всю стену
+            | в&nbsp;акцент вашей мебели
+        +buttonArrowText({text: "Получить скидку", href: "#"}).btn--arrow-icon.category-cards__btn

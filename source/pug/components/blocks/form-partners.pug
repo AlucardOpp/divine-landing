@@ -1,0 +1,17 @@
+mixin makingPartners()
+  section.cooperation.form-partners
+    .container
+      .cooperation__container.form-partners__container
+        .cooperation__image
+          +picture("content", "making-partners", "jpg", 1200, 290, "Фоновое изображение")
+        .cooperation__text-content.cooperation__text-content--partners
+          h2.cooperation__title.cooperation__title--dark.title.title--h2!="Станьте нашим партнёром"
+          p.cooperation__description.cooperation__description--dark!="Мы готовы предложить взаимовыгодные условия,<br> вы&nbsp;не&nbsp;разочаруетесь!"
+        .cooperation__form(data-validate)
+          form(action="#")
+            .cooperation__inputs
+              .cooperation__input
+                +custom-input({inputType: "text", inputName: "user-name", inputId: "user-name", inputPlaceholder: "Ваше имя", inputError: "Заполните поле"}).custom-input--dark(data-validate-type="text")
+              .cooperation__input
+                +custom-input({inputType: "tel", inputName: "user-phone", inputId: "user-phone", inputPlaceholder: "Ваш телефон", inputError: "Некорректный номер телефона"}).custom-input--dark(data-validate-type="phone")
+            +btn.btn.btn--yellow.cooperation__button(type="submit")!="Оставить заявку"

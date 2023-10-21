@@ -1,0 +1,39 @@
+mixin television()
+  section.television(data-tabs="parent" data-delay="300" data-height="max")
+    .container
+      .television__tabs.tabs
+        .television__text-content
+          h2.television__title!="Мы&nbsp;на&nbsp;телевидении"
+          p.television__description!="Являясь территорией вдохновения по&nbsp;созданию уникального архитектурного пространства за&nbsp;счёт освещения, наша компания приняла участие во&nbsp;всех знаменитых дизайнерских телевизионных шоу, связанных с&nbsp;ремонтом среди которых:"
+          .television__controls.tabs__controls
+            button.television__control.tabs__control.btn(type="button" data-tabs="control")!="Школа ремонта"
+              span.television__btn-arrow
+                +icon("icon-btn-arrow-right", 14, 16)
+            button.television__control.tabs__control.btn(type="button" data-tabs="control")!="Идеальный ремонт"
+              span.television__btn-arrow
+                +icon("icon-btn-arrow-right", 14, 16)
+            button.television__control.tabs__control.btn(type="button" data-tabs="control")!="Переделка ТВ"
+              span.television__btn-arrow
+                +icon("icon-btn-arrow-right", 14, 16)
+        .television__content.tabs__content(data-tabs="content")
+          .television__element.tabs__element.swiper(data-tabs="element")
+            .swiper-wrapper
+              .television__slide.swiper-slide
+                +picture("content", "television-image", "jpg", 583, 583, "Ремонт")
+              .television__slide.swiper-slide
+                +picture("content", "television-image", "jpg", 583, 583, "Ремонт")
+            +slider-controls().television__slider-controls
+          .television__element.tabs__element.swiper(data-tabs="element")
+            .swiper-wrapper
+              .television__slide.swiper-slide
+                +picture("content", "television-image", "jpg", 583, 583, "Ремонт")
+              .television__slide.swiper-slide
+                +picture("content", "television-image", "jpg", 583, 583, "Ремонт")
+            +slider-controls().television__slider-controls
+          .television__element.tabs__element.swiper(data-tabs="element")
+            .swiper-wrapper
+              .television__slide.swiper-slide
+                +picture("content", "television-image", "jpg", 583, 583, "Ремонт")
+              .television__slide.swiper-slide
+                +picture("content", "television-image", "jpg", 583, 583, "Ремонт")
+            +slider-controls().television__slider-controls

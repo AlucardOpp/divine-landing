@@ -1,0 +1,52 @@
+.button-controls {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  padding: 7px 5px;
+  color: $color-default-black;
+  cursor: pointer;
+  background-color: transparent;
+  transition: opacity $trans-default;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover .button-arrow__icon {
+      opacity: 0.7;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 19px;
+    height: 19px;
+    margin-left: 7px;
+    background-color: $color-default-black;
+    border-radius: 50%;
+    color: $color-default-white;
+  }
+
+  &__icon svg {
+    transition: transform $trans-default;
+  }
+
+  &__text--close {
+    display: none;
+  }
+
+  &.is-open .button-controls__text--open {
+    display: none;
+  }
+
+  &.is-open .button-controls__text--close {
+    display: flex;
+  }
+
+  &.is-open .button-controls__icon svg {
+    transform: rotate(180deg);
+  }
+}

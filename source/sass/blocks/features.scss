@@ -1,0 +1,285 @@
+.features {
+  &__slider {
+    display: none;
+
+    @include vp-767 {
+      display: block;
+      position: relative;
+    }
+  }
+
+  &__slide {
+    & img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__slider-controls {
+    position: absolute;
+    bottom: 17px;
+    right: 19px;
+  }
+
+  & .container {
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+
+    @include vp-767 {
+      margin-bottom: 59px;
+      padding-left: 20px;
+    }
+
+    & .features__title {
+      align-self: flex-start;
+      max-width: 700px;
+      font-size: 35px;
+      line-height: 43px;
+      font-weight: 800;
+      margin: 0;
+      margin-bottom: 41px;
+
+      @include vp-1279 {
+        max-width: 100%;
+      }
+
+      @include vp-767 {
+        font-size: 17px;
+        line-height: 21px;
+        margin-bottom: 21px;
+        max-width: 100%;
+      }
+    }
+
+    & .features-content {
+      display: flex;
+
+      @include vp-1279 {
+        display: block;
+      }
+
+      & .features-content-gallery {
+        padding-right: 33px;
+
+        @include vp-1279 {
+          display: flex;
+          justify-content: center;
+          padding-right: 0;
+        }
+
+        @include vp-767 {
+          margin-bottom: 20px;
+        }
+
+        & .features-content-gallery__item {
+          position: relative;
+          padding-bottom: 35px;
+
+          & .controls {
+            display: none;
+            bottom: 30px;
+            right: -10px;
+
+            & button {
+              border: none;
+              padding: 0;
+              margin: 0 23px;
+            }
+
+            @include vp-767 {
+              display: flex;
+            }
+          }
+
+          @include vp-1279 {
+            &:first-child {
+              padding-right: 15px;
+            }
+          }
+
+          @include vp-767 {
+            padding-bottom: 20px;
+            display: none;
+
+            &:first-child {
+              padding-right: 0;
+            }
+
+            &:not(:first-child) {
+              display: none;
+            }
+          }
+        }
+      }
+
+      & .content-right {
+        max-width: 583px;
+
+        @include vp-1279 {
+          max-width: 100%;
+        }
+
+        & .content-right-list {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          min-height: 553px;
+          max-width: 560px;
+          padding-top: 9px;
+          padding-bottom: 36px;
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 30px;
+
+          @include vp-1279 {
+            min-height: max-content;
+          }
+
+          @include vp-767 {
+            padding-bottom: 0;
+            margin-bottom: 41px;
+          }
+
+          & .content-right-list__item {
+            padding-left: 67px;
+            position: relative;
+
+            &:not(:last-of-type) {
+              margin-bottom: 36px;
+            }
+
+            @include vp-767 {
+              padding-left: 50px;
+              padding-right: 16px;
+            }
+
+            &:not(:last-child) {
+              @include vp-767 {
+                margin-bottom: 36px;
+              }
+            }
+
+            &:first-child {
+              & .content-right-list__icon {
+                top: 0;
+              }
+            }
+
+            &:first-of-type .content-right-list__description {
+              max-width: 447px;
+
+              @include vp-767 {
+                max-width: none;
+              }
+            }
+
+            &:last-of-type {
+              margin-top: 6px;
+
+              @include vp-767 {
+                margin-top: 0;
+              }
+            }
+
+            & .content-right-list__icon {
+              position: absolute;
+              left: 16px;
+              top: -6px;
+              width: 35px;
+              height: 35px;
+              border-radius: 50%;
+              background-color: $color-default-black;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              @include vp-767 {
+                left: 0px;
+              }
+
+              & svg {
+                width: 14px;
+                height: 14px;
+                color: $color-default-white;
+              }
+            }
+
+            & .content-right-list__title {
+              font-size: 19px;
+              font-weight: 700;
+              line-height: 23px;
+              margin: 0;
+              padding-bottom: 15px;
+
+              @include vp-767 {
+                font-size: 15px;
+                line-height: 18px;
+                padding-bottom: 16px;
+              }
+            }
+
+            &:last-child {
+              margin-top: 5px;
+
+              @include vp-767 {
+                font-size: 15px;
+                line-height: 18px;
+              }
+            }
+
+            & .content-right-list__description {
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 17px;
+              margin: 0;
+              max-width: 475px;
+
+              @include vp-767 {
+                max-width: none;
+              }
+            }
+          }
+        }
+
+        & .btn-container {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          @include vp-767 {
+            & img {
+              display: none;
+            }
+          }
+
+          & .btn {
+            position: absolute;
+            margin: 2px 0 0 0;
+            padding: 0 0 0 3px;
+            width: 215px;
+            height: 58px;
+            font-size: 18px;
+            line-height: 22px;
+            top: calc(50% - 29px);
+            left: calc(50% - 107.5px);
+
+            @include vp-767 {
+              position: static;
+              width: 183px;
+              height: auto;
+              min-height: 49px;
+              margin: 0;
+              padding: 0;
+              font-size: 16px;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

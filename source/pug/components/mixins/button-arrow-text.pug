@@ -1,0 +1,9 @@
+mixin buttonArrowText(options = {})
+  - const text = options.text || "";
+  - const buttonOptions = options;
+  - buttonOptions.text = '';
+
+  +btn(buttonOptions).btn--arrow-text&attributes(attributes)
+    span.btn__text!=text
+    span
+      +icon('icon-right', 14, 15)

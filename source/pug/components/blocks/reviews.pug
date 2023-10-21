@@ -1,0 +1,42 @@
+mixin reviews()
+  .reviews
+    //- вставлять блоки во внешний контейнер неверно
+    //- все блоки содержат в себе container без доп класса tutorial__wrapper
+    .container
+      .reviews__title
+        h2 Отзывы владельцев гостиниц о Дивайн Лайт
+      .reviews__slider.swiper
+        .reviews__people.swiper-wrapper
+          .reviews__people-item.swiper-slide
+            .reviews__user
+              .reviews__user-img
+                +picture("content", "otsiv_darya", "webp", 83, 83, "Дарья Матвеева")
+              .reviews__user-text
+                p Матвеева Дарья
+                span менеджер Hyatt Regency
+            .reviews__content
+              +icon('quotation-mark', 29, 26)
+              p Моим партнером и&nbsp;поставщиком по&nbsp;освещению стала компания &laquo;Дивайн Лайт&raquo;. Опыт более 13&nbsp;лет на&nbsp;рынке позволяет исключить ошибки начинающих, подсказать о&nbsp;важном на&nbsp;этапе проектирования и&nbsp;продумать все детали освещения интерьера.
+
+          .reviews__people-item.swiper-slide
+            .reviews__user
+              .reviews__user-img
+                +picture("content", "otsiv_vitaliy", "webp", 83, 83, "Виталий Матвеев")
+              .reviews__user-text
+                p Матвеев Виталий
+                span совладелец Motel&Hotel
+            .reviews__content
+              +icon('quotation-mark', 29, 26)
+              p С&nbsp;компанией &laquo;Дивайн Лайт&raquo; сотрудничаю уже более 3-х лет. Закупаю для своих проектов все освещение в&nbsp;этом замечательном магазине. Работаем с&nbsp;самого начала с&nbsp;одним менеджером Кириллом, так как он&nbsp;сразу зарекомендовал себя как грамотный и&nbsp;отзывчивый специалист.
+
+          .reviews__people-item.swiper-slide
+            .reviews__user
+              .reviews__user-img
+                +picture("content", "otsiv_anna", "webp", 83, 83, "Анна Павлова")
+              .reviews__user-text
+                p Анна Павлова
+                span владелец “Можайский дворик”
+            .reviews__content
+              +icon('quotation-mark', 29, 26)
+              p Особое внимание хочется уделить бренда DENKIRS - умное освещение , которое способно украсить любой дизайн проект!
+      +slider-controls.reviews__slider-controls

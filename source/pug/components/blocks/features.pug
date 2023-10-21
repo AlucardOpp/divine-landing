@@ -1,0 +1,55 @@
+mixin features()
+  .features
+    .container
+      h2.features__title Почему Дивайн Лайт выбирают владельцы гостиничного бизнеса?
+
+      .features-content
+        .features-content-gallery
+          .features-content-gallery__item
+            +controls(1, 3)
+            +picture("content", "photo_divan", "webp", 583, 583, "Пример освещения холла гостиницы")
+          .features-content-gallery__item
+            +picture("content", "photo_lampa", "webp", 583, 583, "Пример наружного освещения")
+          .features__slider.swiper
+            .swiper-wrapper
+              .features__slide.swiper-slide
+                +picture("content", "photo_divan", "webp", 583, 583, "Пример освещения холла гостиницы")
+              .features__slide.swiper-slide
+                +picture("content", "photo_divan", "webp", 583, 583, "Пример освещения холла гостиницы")
+              .features__slide.swiper-slide
+                +picture("content", "photo_divan", "webp", 583, 583, "Пример освещения холла гостиницы")
+            +slider-controls().features__slider-controls
+        .content-right
+          ul.content-right-list
+            li.content-right-list__item
+              .content-right-list__icon
+                svg
+                  use(xlink:href="#icon-plus")
+              h3.content-right-list__title У&nbsp;нас&nbsp;Вы сможете реализовать архитектурное, ландшафтное и&nbsp;интерьерное освещение
+              p.content-right-list__description.
+                Точное понимание того, как свет взаимодействует с&nbsp;архитектуройи опыт наших специалистов позволят Вам решать самые креативные задачи по&nbsp;освещению, придавая особую красоту и&nbsp;уникальность нужных Вам пространств при помощи света.
+            li.content-right-list__item
+              .content-right-list__icon
+                svg
+                  use(xlink:href="#icon-plus")
+              h3.content-right-list__title Персональный менеджер
+              p.content-right-list__description.
+                За&nbsp;Вашим проектом будет закреплён персональный менеджер, который будет вести Ваш проект от&nbsp;начала и&nbsp;до&nbsp;конца, поможет с&nbsp;расчетом даже самого сложного проекта и&nbsp;подберёт все необходимые комплектующие. Также менеджер осуществляет выезд на&nbsp;объект.
+            li.content-right-list__item
+              .content-right-list__icon
+                svg
+                  use(xlink:href="#icon-plus")
+              h3.content-right-list__title Большой ассортимент
+              p.content-right-list__description.
+                У&nbsp;нас представлены модели светильников более 500&nbsp;брендов. Наш ассортимент позволит вам создать идеальный баланс между художественной красотой и&nbsp;инновационными технологиями.
+            li.content-right-list__item
+              .content-right-list__icon
+                svg
+                  use(xlink:href="#icon-plus")
+              h3.content-right-list__title Проверка перед отгрузкой
+              p.content-right-list__description.
+                Весь товар проходит тщательную проверку перед отгрузкой.
+
+          .btn-container
+            +picture("content", "photo_podium", "webp", 583, 583, "Пример освещения")
+            +btn({text: "Узнать больше", href: "#"}).btn--yellow

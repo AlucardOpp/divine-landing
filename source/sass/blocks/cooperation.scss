@@ -1,0 +1,171 @@
+.cooperation {
+  margin-bottom: 106px;
+
+  @include vp-1023 {
+    margin-bottom: 53px;
+  }
+
+  .container {
+    @include vp-1023 {
+      padding: 0;
+    }
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 48px 111px 80px 45px;
+    margin-bottom: 23px;
+
+    @include vp-1023 {
+      padding: 34px 20px 60px;
+      margin-bottom: 27px;
+    }
+  }
+
+  &__text-content {
+    max-width: 350px;
+
+    @include vp-1023 {
+      max-width: none;
+      margin-bottom: 3px;
+    }
+
+    &--partners {
+      max-width: 570px;
+
+      @include vp-1279 {
+        max-width: 540px;
+      }
+
+      @include vp-1023 {
+        max-width: none;
+        width: 100%;
+      }
+
+      @include vp-767 {
+        & br {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 33px;
+    line-height: 40px;
+    color: $color-default-white;
+    margin: 0 0 36px 0;
+
+    @include vp-1023 {
+      font-size: 28px;
+      line-height: 34px;
+      margin-bottom: 23px;
+      max-width: calc(100% - 45px);
+    }
+
+    &--dark {
+      color: $color-default-black;
+    }
+  }
+
+  &__description {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    color: $color-default-white;
+    margin: 0;
+
+    @include vp-1023 {
+      font-size: 15px;
+      line-height: 18px;
+    }
+
+    &--dark {
+      color: $color-default-black;
+    }
+  }
+
+  &__information {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    color: $color-default-black;
+    margin: 0 0 0 40px;
+    max-width: 455px;
+
+    @include vp-1023 {
+      max-width: none;
+      margin-left: 20px;
+      margin-right: 44px;
+    }
+
+    & a {
+      color: $color-earls-green;
+      transition: opacity $trans-default;
+
+      @include hover {
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+  &__button {
+    font-size: 18px;
+    line-height: 22px;
+    width: 272px;
+    margin: 0 0 0 2px;
+    min-height: 55px;
+
+    @include vp-1023 {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+
+    & img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__form {
+    margin-top: 32px;
+
+    @include vp-1023 {
+      width: 100%;
+    }
+  }
+
+  &__inputs {
+    margin-bottom: 43px;
+  }
+
+  &__input {
+    &:not(:last-of-type) {
+      margin-bottom: 30px;
+    }
+
+    & .custom-input {
+      width: 276px;
+      padding: 0;
+
+      @include vp-1023 {
+        width: 100%;
+      }
+    }
+  }
+}

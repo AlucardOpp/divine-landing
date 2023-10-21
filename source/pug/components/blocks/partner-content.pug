@@ -1,0 +1,21 @@
+mixin partnerContent()
+  .partner-content
+    .container.partner-content__container
+      .partner-content__about
+        p
+          | Описание компании, которое идет очень длинно и надо сюда
+          | что&nbsp;то&nbsp;написать чтобы клиент понимал у кого будет получать скидку
+        p
+          | Мы работаем уже более 10&nbsp;лет на&nbsp;рынке электроинструмента
+          | и&nbsp;предлагаем лучшие варианты для&nbsp;любых компаний от&nbsp;мала до&nbsp;велика
+      .partner-content__bonuses
+        .partner-content__offer
+          +title({level: "3", text: "Что вы получаете?"}).title--h3
+          p
+            | Скидка 10% на весь ассортимент компании
+            | при предъявлении чека из Дивайн Лайт
+        .partner-content__bonuses-footer
+          span.partner-content__bonus
+            | Скидка 10%
+          .partner-content__link-wrapper
+            +buttonArrowText({text: "Перейти в магазин", href: "#"})

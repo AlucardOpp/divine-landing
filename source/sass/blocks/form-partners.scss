@@ -1,0 +1,45 @@
+.form-partners {
+  .container {
+    @include vp-1023 {
+      padding: 0 20px;
+    }
+  }
+
+  &__container {
+    padding: 31px 87px 43px 32px;
+
+    @include vp-767 {
+      padding: 22px 30px 26px 17px;
+    }
+  }
+
+  .cooperation__title {
+    margin-bottom: 16px;
+
+    @include vp-767 {
+      margin-bottom: 10px;
+    }
+  }
+
+  .cooperation__description {
+    font-size: 18px;
+    line-height: 22px;
+
+    @include vp-1023 {
+      margin-bottom: 17px;
+    }
+  }
+
+  .cooperation__form {
+    margin-top: 8px;
+  }
+
+  .custom-input__error {
+    font-size: 13px;
+    line-height: 17px;
+  }
+
+  input:-webkit-autofill {
+    transition: background-color 10000000s ease-in-out 0s;
+  }
+}

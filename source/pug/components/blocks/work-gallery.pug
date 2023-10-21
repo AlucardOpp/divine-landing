@@ -1,0 +1,20 @@
+mixin workGallery()
+  .work-gallery
+    .container
+      h2.work-gallery__title Галерея работ
+
+      .work-gallery__description
+        p За время нашей работы мы воплотили в жизнь различные дизайн&#x2060;-&#x2060;проекты по освещению гостиниц и домов отдыха.
+        p Приглашаем Вас прогуляться по галлерее, где мы представили небольшую часть наших работ.
+
+      .work-gallery__gallery.swiper
+        .swiper-wrapper
+          .swiper-slide
+            +picture("content", "galereya_lampa", "webp", 265, 362, "Пример освещения")
+          .swiper-slide
+            +picture("content", "galereya_divan", "webp", 152, 362, "Пример освещения")
+          .swiper-slide
+            +picture("content", "galereya_domiki", "webp", 511, 362, "Пример освещения")
+          .swiper-slide
+            a(href="#").work-gallery__show-more еще 7
+        +slider-controls.work-gallery__slider-controls
